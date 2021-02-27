@@ -13,6 +13,6 @@ namespace BlazorAPIEmpleados.Data
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Telefono { get; set; }
-        public int? EstatusId { get; set; }
+        public int EstatusId { get; set; }
     }
 }

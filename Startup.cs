@@ -15,6 +15,7 @@ namespace BlazorAPIEmpleados
 {
     public class Startup
     {
+        readonly string MiCors = "MiCors";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +26,15 @@ namespace BlazorAPIEmpleados
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MiCors,
+                    builder =>
+                    {
+                        builder.WithOrigins("*");
+                    }
+                    );
+            });
             services.AddControllers();
         }
 
@@ -41,6 +51,7 @@ namespace BlazorAPIEmpleados
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors(MiCors);
 
             app.UseEndpoints(endpoints =>
             {
