@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace BlazorAPIEmpleados.Data
+namespace BlazorAPIEmpleados.Models.Request
 {
     public class Empleados
     {

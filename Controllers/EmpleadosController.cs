@@ -1,4 +1,5 @@
-﻿using BlazorAPIEmpleados.Data;
+﻿using BlazorAPIEmpleados.Models.Request;
+using BlazorAPIEmpleados.Data;
 using BlazorAPIEmpleados.Models.Responses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BlazorAPIEmpleados.Controllers
 {

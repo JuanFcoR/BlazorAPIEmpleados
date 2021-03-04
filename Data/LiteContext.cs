@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BlazorAPIEmpleados.Models.Request;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,8 @@ namespace BlazorAPIEmpleados.Data
 {
     public class LiteContext : DbContext
     {
+        public virtual DbSet<Empleados> Empleados { get; set; }
+        public virtual DbSet<Estatus> Estatuses { get; set; }
         //Contexto manual con SQLite
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
